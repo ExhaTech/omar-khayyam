@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta
+      name="description"
+      content="Menú digital de Omar Khayyam — bar y restaurante en Calle de la Amargura, San Pedro."
+    />
+    <meta name="theme-color" content="#0a0a0a" />
+    <title>Menú · Omar Khayyam</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="menu.css" />
+    <link rel="icon" href="assets/omar-khayyam-logo.png" type="image/png" />
+  </head>
+  <body class="menu-body">
+    <a class="skip-link" href="#menu-list">Ir al menú</a>
+
+    <header class="menu-top">
+      <a class="menu-top__brand" href="/">
+        <img src="assets/omar-khayyam-logo.png" alt="Omar Khayyam" width="140" height="56" />
+      </a>
+      <a class="menu-top__home" href="/">Inicio</a>
+    </header>
+
+    <main class="menu-page">
+      <div class="wrap menu-page__intro">
+        <h1 class="menu-page__title">Menú</h1>
+        <p class="menu-page__note" id="menu-note">Precios incluyen IVA y servicio a la mesa.</p>
+
+        <label class="menu-page__search">
+          <span class="visually-hidden">Buscar un plato</span>
+          <input
+            id="menu-search"
+            type="search"
+            placeholder="Buscar un plato o bebida"
+            autocomplete="off"
+            enterkeyhint="search"
+          />
+        </label>
+      </div>
+
+      <div class="menu-page__sticky">
+        <div class="wrap menu-page__sticky-inner">
+          <p class="menu-page__eyebrow">Carta digital</p>
+        </div>
+        <div class="menu-page__cats" role="tablist" aria-label="Categorías del menú">
+          <div class="menu-page__cats-track" id="menu-cats"></div>
+        </div>
+      </div>
+
+      <div class="wrap menu-page__list" id="menu-list" aria-live="polite"></div>
+    </main>
+
+    <footer class="footer menu-footer">
+      <div class="wrap footer__inner">
+        <p class="footer__brand">Omar Khayyam</p>
+        <p class="footer__credit">
+          Desarrollado por
+          <a href="https://exhatech.com" target="_blank" rel="noopener noreferrer">Exha Tech</a>
+        </p>
+      </div>
+    </footer>
+
+    <div id="dish-detail" class="dish-detail" hidden></div>
+
+    <script src="menu-data.js"></script>
+    <script src="menu.js"></script>
+  </body>
+</html>
